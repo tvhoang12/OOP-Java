@@ -1,24 +1,19 @@
-import java.util.BitSet;
-
+import java.util.Scanner;
 public class j01012 {
-     static BitSet sieve(BitSet bitSet) {
-        bitSet.set(0, false); // 0 không phải số nguyên tố
-        bitSet.set(1, false); // 1 không phải số nguyên tố
-
-        int limit = (int) Math.sqrt(bitSet.size());
-
-        for (int i = 2; i <= limit; i++) {
-            if (bitSet.get(i)) {
-                for (int j = i * i; j < bitSet.size(); j += i) {
-                    bitSet.set(j, false);
+    public static boolean []sieve(boolean []arr) {
+        arr[0] = arr[1] = false;
+        for(int i = 2; i <= 1000000000; i ++) {
+            if(arr[i]) {
+                for(int j = i * i; j <= 1000000000; j += i) {
+                    arr[j] = false;
                 }
             }
         }
-        return bitSet;
+        return arr;
     }
     public static void main(String [] args) {
-        BitSet arr = new BitSet(1000000001);
-        java.util.Scanner sc = new java.util.Scanner(System.in);
+        boolean[] arr = new boolean[1000000001];
+        Scanner sc = new Scanner(System.in);
         sieve(arr);
         int t = sc.nextInt();
         while(t --> 0) {
@@ -35,18 +30,15 @@ public class j01012 {
                 int count = 0;
                 int z = 3;
                 while(n > 1) {
-                    if(n % z == 0 && arr.get(z)) {
-                        while(n % z == 0) {
+                    if(n % z == 0 && arr[z]) {
+                        while(n % t == 0) {
                             count ++;
-                            n /= z;
+                            n /= t;
                         }
                         countNumberDevide2 *= (count + 1);
                         count = 0;
                     }
                     z += 2;
-                }
-                if(n > 1) {
-                    countNumberDevide2 *= 2;
                 }
                 System.out.println(countNumberDevide2);
             }
