@@ -1,0 +1,1 @@
+{"name":"Local: j03010","url":"d:\\sourceCode\\Java\\j03010.java","tests":[{"id":1726111583649,"input":"4\n    nGUYEn    quaNG   vInH  \n   tRan   thi THU    huOnG\n   nGO   quoC  VINH\n lE            tuAn    aNH","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\sourceCode\\Java\\j03010.java","group":"local","local":true}
