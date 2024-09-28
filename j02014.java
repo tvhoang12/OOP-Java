@@ -21,7 +21,7 @@ public class j02014 {
             boolean check = false;
 
             for(int i = 1; i < n; i ++) {
-                if(sum_to_index[i - 1] == sum_to_index[n - 1] - sum_to_index[i]) {
+                if(sum_to_index[i - 1] == sum_to_index[n - 1] - sum_to_index[i] && check == false) {
                     check = true;
                     System.out.println(i + 1);
                 }

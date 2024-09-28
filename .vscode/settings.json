@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "d:\\sourceCode\\Web_Spotify_Clone\\mysql-connector-java-8.0.25.jar"
+    ]
+}
