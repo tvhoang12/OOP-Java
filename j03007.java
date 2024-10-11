@@ -30,5 +30,7 @@ public class j03007 {
             }
             System.out.println(check ? "YES" : "NO");
         }
+
+        sc.close();
     }
 }

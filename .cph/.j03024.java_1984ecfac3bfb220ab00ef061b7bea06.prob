@@ -1,0 +1,1 @@
+{"name":"Local: j03024","url":"d:\\sourceCode\\Java\\j03024.java","tests":[{"id":1728223236297,"input":"3\n01234aa32432432432534545b987978\n1234567890123456789000\n999999999999999999999999999999","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\sourceCode\\Java\\j03024.java","group":"local","local":true}

@@ -13,10 +13,6 @@ public class j03013 {
 
             BigInteger a = new BigInteger(big);
             BigInteger b = new BigInteger(small);
-            
-            // while(res.length() < tmp) {
-            //     res = "0" + res;
-            // }
 
             System.out.println(a.subtract(b));
         // }
