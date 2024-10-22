@@ -1,0 +1,1 @@
+{"name":"Local: j08020","url":"d:\\sourceCode\\Java\\j08020.java","tests":[{"id":1729519710742,"input":"2\n[()]{}{[()()]()}\n[(])","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\sourceCode\\Java\\j08020.java","group":"local","local":true}

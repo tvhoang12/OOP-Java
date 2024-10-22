@@ -1,0 +1,1 @@
+{"name":"Local: j07058","url":"d:\\sourceCode\\Java\\j07058.java","tests":[{"id":1728658633773,"input":"2\nMUL1320\nNhap mon da phuong tien\nBai tap lon + Van dap truc tuyen\nBAS1203\nGiai tich 1\nThi viet + Van dap truc tuyen","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\sourceCode\\Java\\j07058.java","group":"local","local":true}
