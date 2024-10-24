@@ -1,0 +1,1 @@
+{"name":"Local: JKT014","url":"d:\\sourceCode\\Java\\JKT014.java","tests":[{"id":1729599485087,"input":"2\n7\n100 80 80 70 60 75 85\n10\n20 24 100 35 60 80 90 60 100 20","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\sourceCode\\Java\\JKT014.java","group":"local","local":true}

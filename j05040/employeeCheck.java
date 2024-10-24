@@ -17,11 +17,9 @@ public class employeeCheck {
             employee emp = new employee(empName, empBaseSalary, empDateWork, empPosition);
             arr.add(emp);
         }
-
-        // for(employee emp : arr) {
-        //     System.out.println(emp);
-        // }
-        // sc.close();
+        for(employee x : arr) {
+            System.out.println(x);
+        }
     }
 
 }
