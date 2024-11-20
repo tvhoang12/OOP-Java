@@ -37,6 +37,7 @@ class ThiSinh {
         else this.dt = 0;
     }
     public void setDTB() {
+        // phải làm tròn điểm trung bình lý thuyết và thực hành trc ms AC
         this.dtb = (int) Math.min(10, (Math.round((this.lythuyet + this.thuchanh) / 2.0 ) + this.dt));
     }
     public void setXepLoai() {
