@@ -6,7 +6,7 @@ import java.util.*;
 
 class ThiSinh {
     private String name, id;
-    private String ngaysinh, xeploai;
+    private String xeploai;
     private double lythuyet, thuchanh, dt;
     private static int stt = 0;
     private int dtb, tuoi;
@@ -24,7 +24,7 @@ class ThiSinh {
     }
 
     public void setTuoi(String ngaysinh) {
-        String []words = ngaysinh.split("/");
+        String [] words = ngaysinh.split("/");
         this.tuoi = 2021 - Integer.parseInt(words[2]);
     }
     public void setDT() {
@@ -37,31 +37,14 @@ class ThiSinh {
         else this.dt = 0;
     }
     public void setDTB() {
-        this.dtb = (int) Math.min(10, Math.round((this.lythuyet + this.thuchanh) / 2.0 + this.dt));
+        this.dtb = (int) Math.min(10, (Math.round((this.lythuyet + this.thuchanh) / 2.0 ) + this.dt));
     }
     public void setXepLoai() {
-        switch (this.dtb) {
-            case 10:
-                xeploai = "Xuat Sac";
-                break;
-            case 9:
-                xeploai = "Xuat Sac";
-            case 8:
-                xeploai = "Gioi";
-                break;
-            case 7:
-                xeploai = "Kha";
-                break;
-            case 6:
-                xeploai = "Trung Binh";
-                break;
-            case 5:
-                xeploai = "Trung Binh";
-                break;
-            default:
-                xeploai = "Truot";
-                break;
-        }
+        if(this.dtb == 10 || this.dtb == 9) this.xeploai = "Xuat sac";
+        else if(this.dtb == 8) this.xeploai = "Gioi";
+        else if(this.dtb == 7) this.xeploai = "Kha";
+        else if(this.dtb == 5 || this.dtb == 6) this.xeploai ="Trung binh";
+        else this.xeploai = "Truot";
     }
     public void setName(String ten) {
         String [] words = ten.trim().split(" ");
@@ -72,6 +55,7 @@ class ThiSinh {
                 this.name += words[i] + " ";
             }
         }
+
         this.name = this.name.trim();
     }
 
