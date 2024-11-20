@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import danhsachsinhvien1.Student;
+
 class Student {
     private String id, hoten, type;
     private float[] diemcacmon;

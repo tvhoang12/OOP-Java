@@ -1,20 +1,12 @@
-import java.util.TreeSet;
+public static boolean KtraTN(int num) {
+        String check = Integer.toString(num);
+        if((check.length() % 2) == 1 && (check.charAt(check.length() / 2 + 1) -'0') % 2 == 1) {
+            for(int i = 0; i < check.length() /2; i++) {
+                if((check.charAt(i) - '0') != (check.charAt(check.length() - i - 1) - '0') && (check.charAt(i) - '0') % 2 != 1) {
+                    return false;
+                }
+            }
+        } else return false;
 
-public class tempCodeRunnerFile {
-    public static void main(String [] args) {
-        TreeSet<String> set1 = new TreeSet<>();
-        TreeSet<String> set2 = new TreeSet<>();
-        String [] inputFile = "lap trinh huong doi tuong".split(" ");
-        String [] inputFile2 = "c++ ngon ngu lap trinh".split(" ");
-
-        for(String s : inputFile) {
-            set1.add(s);
-        }
-        for(String s : inputFile2) set2.add(s);
-
-        set1.retainAll(set2);
-        for(String s : set1) {
-            System.out.println(s);
-        }
+        return true;
     }
-}

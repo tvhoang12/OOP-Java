@@ -2,34 +2,37 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
+import java.io.IOException;
+import java.io.File;
 
-class MatHang {
+class MatHang implements Comparable<MatHang> {
     private String TenSP, NhomHang;
     private double LoiNhuan;
-    private int id;
+    private String id;
     private static int stt = 0;
 
     public MatHang() {}
     public MatHang(String TenSP, String NhomHang, double LoiNhuan) {
-        this.id = ++stt;
+        this.id = String.format("MH%02d", ++stt);
         this.TenSP = TenSP;
         this.NhomHang = NhomHang;
         this.LoiNhuan = LoiNhuan;
     }
 
-    public boolean isBigger(MatHang h2) {
-        return LoiNhuan > h2.LoiNhuan;
+    @Override
+    public int compareTo(MatHang h2) {
+        return -Double.compare(LoiNhuan, h2.LoiNhuan);
     }
 
     @Override
     public String toString () {
-        return String.format( "%d %s %s %.2f", id, TenSP, NhomHang, LoiNhuan);
+        return String.format( "%s %s %s %.2f", id, TenSP, NhomHang, LoiNhuan);
     }
 }
 
 public class j05010 {
-    public static void main(String [] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String [] args) throws IOException {
+        Scanner sc = new Scanner(new File("MATHANG.in"));
         int t = sc.nextInt();
         ArrayList<MatHang> mathang = new ArrayList<>();
         for(int i = 0; i < t; i++) {
@@ -42,14 +45,7 @@ public class j05010 {
             mathang.add(temp);
         }
 
-        Collections.sort(mathang, new Comparator<MatHang>() {
-            @Override
-            public int compare(MatHang m1, MatHang m2) {
-                if(m1.isBigger(m2)) return -1;
-                else if(m2.isBigger(m1)) return 1;
-                else return 0;
-            }
-        });
+        Collections.sort(mathang);
 
         for(MatHang e: mathang) {
             System.out.println(e);
