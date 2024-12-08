@@ -3,7 +3,6 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class J08028 {
-
     public static long maxRectangle(int [] arr, int n) {
         Stack<Integer> st = new Stack<>();
 

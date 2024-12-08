@@ -40,6 +40,10 @@ class GV {
         return tgd;
     }
 
+    public HashMap<MH, Double> getDSMH() {
+        return dsmh;
+    }
+
     public void setTgd(double tgd) {
         this.tgd += tgd;
     }
@@ -49,17 +53,6 @@ class GV {
         setTgd(tg);
     }
 
-
-    @Override
-    public String toString() {
-        String s = "";
-        s += "Giang vien: " + tengv + "\n";
-        for (MH mh : dsmh.keySet()) {
-            s += mh.getTenMon() + " " + dsmh.get(mh) + "\n";
-        }
-        s += String.format("Tong: %.2f", tgd);
-        return s;
-    }
 }
 
 public class j06007 {
@@ -108,7 +101,8 @@ public class j06007 {
         // GV fgv = new GV();
         for(GV gv : dsgv) {
             if (gv.getMagv().equals(magv)) {
-                System.out.println(gv);
+                System.out.printf("Giang vien: %s", gv.getTengv());
+                for()
             }
         }
     }
